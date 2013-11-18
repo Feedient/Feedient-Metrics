@@ -1,0 +1,10 @@
+{
+	"name": "Feedient-Metrics",
+	"description": "Feedient-Metrics is a metric server that saves metric points to a database.",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"mongodb": "*",
+		"async": "*"
+	}
+}
