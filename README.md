@@ -1,6 +1,6 @@
 # Feedient-Metrics
 ## About
-Feedient-Metrics is the metrics server that is being used by [http://feedient.com](http://feedient.com, "Feedient"), the purpose of it is to be able to create metrics of an application by sending a small line of code to this server.
+Feedient-Metrics is the metrics server that is being used by [http://feedient.com](http://feedient.com), the purpose of it is to be able to create metrics of an application by sending a small line of code to this server.
 
 It listens on udp connections so that every message gets handled as quick as possible without needing to verify packets.
 
