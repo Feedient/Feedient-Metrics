@@ -56,6 +56,9 @@ server.on('message', function(message, remote) {
 		case 'c':
 			handleCounter(messageComponents[1], messageComponents[2], remote);
 			break;
+		case 't':
+			handleTick(messageComponents[1], messageComponents[2], remote);
+			break;
 		default:
 			console.log('Unhandled message: ' + message);
 	}
@@ -68,6 +71,20 @@ var handleCounter = function(table, value, remote) {
 
 	var countDefinition = {
 		type: 'counter',
+		timestamp: new Date().getTime(),
+		value: value
+	};
+
+	flushCache[table]['rows'].push(countDefinition);
+};
+
+var handleTick = function(table, value, remote) {
+	if (!flushCache[table]) {
+		flushCache[table] = { rows:[] };
+	}
+
+	var countDefinition = {
+		type: 'tick',
 		timestamp: new Date().getTime(),
 		value: value
 	};
