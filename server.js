@@ -71,7 +71,7 @@ var handleCounter = function(table, value, remote) {
 
 	var countDefinition = {
 		type: 'counter',
-		timestamp: new Date().getTime(),
+		timestamp: new Date(),
 		value: value
 	};
 
@@ -85,7 +85,7 @@ var handleTick = function(table, value, remote) {
 
 	var countDefinition = {
 		type: 'tick',
-		timestamp: new Date().getTime(),
+		timestamp: new Date(),
 		value: value
 	};
 
